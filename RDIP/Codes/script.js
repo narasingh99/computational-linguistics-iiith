@@ -176,6 +176,7 @@ console.log(j, str1.localeCompare(str), str, str.length, str1, str1.length)
         }
      }
     document.getElementById('demo9').innerHTML = "WRONG ANSWER";
+    document.getElementById("demo10").innerHTML = "<center><button id='showansbtn' onclick='answers()'>GET THE  CORRECT SENTENCE</button></center>"
     
 }
 function answers()
@@ -187,7 +188,7 @@ var x = document.getElementById("lang").value;
 if(x == "english")
 {
 correctanswers = eng[subarray1].length;
-document.getElementById("demo10").innerHTML = "<center><button id='showansbtn1' onclick='hides()'>hide correct answer</button></center>"
+document.getElementById("demo10").innerHTML = "<center><button id='showansbtn1' onclick='hides()'>hide correct sentence</button></center>"
 for(var i=0;i<correctanswers;i++)
 {
 answer += "<center>"+eng[subarray1][i]+"</br></center>"
@@ -197,7 +198,7 @@ document.getElementById("demo11").innerHTML = answer;
 else if(x == "hindi")
 {
 correctanswers = hin[subarray1].length;
-document.getElementById("demo10").innerHTML = "<center><button id='showansbtn1' onclick='hides()'>hide correct answer</button></center>"
+document.getElementById("demo10").innerHTML = "<center><button id='showansbtn1' onclick='hides()'>hide the correct sentence</button></center>"
 for(var j=0;j<correctanswers;j++)
 {
 answer += "<center>"+hin[subarray1][j]+"</br></center>"
@@ -214,7 +215,7 @@ function tooglefunc()
 {
 while(document.getElementById("demo11").innerHTML == "")
 {
-document.getElementById("demo10").innerHTML = "<center><button id='showansbtn1' onclick='hides()'>hide correct answer</button></center>"
+document.getElementById("demo10").innerHTML = "<center><button id='showansbtn1' onclick='hides()'>Hide the correct answer</button></center>"
 document.getElementById("demo11").innerHTML = answer;
 }
 }
